@@ -55,7 +55,8 @@ window.renderStatistics = function (ctx, names, times) {
     if (names[i] === 'Вы') {
       color = CURRENT_PLAYER_COLUMN_COLOR;
     } else {
-      color = '#2d2d44';
+      color = 'hsl(240, 20%, ' + columnHeight + '%)';
+      console.log(color);
     }
     if (i === 0) {
       positionX += 10;
