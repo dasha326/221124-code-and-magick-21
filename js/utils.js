@@ -50,12 +50,11 @@
       element.classList.add('hidden');
     },
     isFormNameValid: function (e, elementValid, form) {
-      console.log();
       if (elementValid.value.length > 2 && elementValid.value.length < 25) {
-        form.submit();
+        window.backend.load(new FormData(form), window.formSuccessHandler, window.backend.errorMessage);
       } else {
         e.preventDefault();
       }
-    },
+    }
   };
 })();

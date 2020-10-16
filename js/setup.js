@@ -11,11 +11,11 @@ const setupWizardEyes = document.querySelector('.setup-wizard .wizard-eyes');
 const setupWizardFireball = document.querySelector('.setup-fireball-wrap');
 const setupWizardFireballInput = document.querySelector('[name="fireball-color"]');
 const setupDialogHandle = setup.querySelector('.upload');
+const setupOpenEvent = () => window.util.removeHidden(setup);
+const setupCloseEvent = () => window.util.addHidden(setup);
 
 // Toggle setup window
 (function () {
-  let setupOpenEvent = () => window.util.removeHidden(setup);
-  let setupCloseEvent = () => window.util.addHidden(setup);
   setupOpen.addEventListener('click', function () {
     setupOpenEvent();
   });
@@ -85,6 +85,9 @@ const setupDialogHandle = setup.querySelector('.upload');
   setupSubmit.addEventListener('click', function (e) {
     window.util.isFormNameValid(e, setupUserName, setupForm);
   });
+  window.formSuccessHandler = function () {
+    setupCloseEvent();
+  };
 })();
 
 // Change Wizard

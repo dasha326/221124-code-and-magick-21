@@ -56,7 +56,6 @@ window.renderStatistics = function (ctx, names, times) {
       color = CURRENT_PLAYER_COLUMN_COLOR;
     } else {
       color = 'hsl(240, 20%, ' + columnHeight + '%)';
-      console.log(color);
     }
     if (i === 0) {
       positionX += 10;
