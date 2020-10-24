@@ -51,7 +51,7 @@
     },
     isFormNameValid: function (e, elementValid, form) {
       if (elementValid.value.length > 2 && elementValid.value.length < 25) {
-        window.backend.load(new FormData(form), window.formSuccessHandler, window.backend.errorMessage);
+        window.backend.save(new FormData(form), window.formSuccessHandler, window.backend.errorMessage);
       } else {
         e.preventDefault();
       }
